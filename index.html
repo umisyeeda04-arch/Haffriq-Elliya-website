@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Haffriq Elliya bin Abdullah, an Information Management student at UiTM.">
+  <meta name="theme-color" content="#f1eee7">
+  <title>Haffriq Elliya — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+<div class="page-loader" id="page-loader" role="status" aria-label="Loading page" hidden>
+  <span class="loader-mark" aria-hidden="true">H.</span>
+  <span class="loader-line" aria-hidden="true"></span>
+  <span class="loader-text">LOADING</span>
+</div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Haffriq home">HAFFRIQ<span>.</span></a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="journey.html">Journey</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav><button class="music-toggle" id="music-toggle" type="button"
+  aria-label="Play music" aria-pressed="false">
+  <span aria-hidden="true">▶</span>
+</button>
+
+<audio id="site-music" loop preload="metadata">
+  <source src="Song.mp3" type="audio/mpeg">
+</audio>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="container home-hero-grid">
+        <div class="home-hero-copy">
+
+          <h1>
+            <span class="hero-intro">HELLO, I'M INTRODUCING YOU</span>
+            Haffriq<br>
+            Elliya<span class="accent-text">.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            someone who believes that life is a continuous process of learning and discovering.naturally curious about how things work, enjoy exploring new ideas, and appreciate the little experiences that help shape who he is today
+          </p>
+
+          <p class="hero-description">
+            A Few Things About Haffriq
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-outline" href="about.html">
+              Know More About Him  <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-dark" href="journey.html">
+              Explore My Journey <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="portrait-frame">
+          <img
+            src="haffriq.jpeg"
+            alt="Portrait of Haffriq Elliya bin Abdullah"
+            onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+          >
+          <div class="portrait-placeholder" hidden>
+            <span>PROFILE PHOTOGRAPH</span>
+            <strong>H.E.</strong>
+            <span> From MIRI · SARAWAK</span>
+          </div>
+          <figcaption>INFORMATION MANAGEMENT · UiTM</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="info-strip" aria-label="At a glance">
+      <div class="container info-strip-grid">
+        <div class="info-item">
+          <span class="info-label">EDUCATION</span>
+          <p>Diploma in Information Management</p>
+        </div>
+        <div class="info-item">
+          <span class="info-label">From</span>
+          <p>Miri, Sarawak, Malaysia</p>
+        </div>
+        <div class="info-item">
+          <span class="info-label">INTERESTS</span>
+          <p>Technology, sports and creativity</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section highlights-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A FEW THINGS THAT SHAPE HIM</p>
+          <h2>Selected <span class="accent-text">highlights.</span></h2>
+        </div>
+
+        <div class="highlight-list">
+          <article class="highlight-item">
+            <span class="highlight-number">01</span>
+            <div>
+              <h3>Leadership</h3>
+              <p>School Prs Prefect, School Prs Secretary, Exco Informs and INFORMS Majlis Tertinggi.</p>
+            </div>
+            <a href="journey.html" aria-label="Read about my leadership experience">↗</a>
+          </article>
+
+          <article class="highlight-item">
+            <span class="highlight-number">02</span>
+            <div>
+              <h3>Sports</h3>
+              <p>Rugby representation and a third-place finish in the Men's Under-19 100-metre event.</p>
+            </div>
+            <a href="journey.html" aria-label="View my sports achievements">↗</a>
+          </article>
+
+          <article class="highlight-item">
+            <span class="highlight-number">03</span>
+            <div>
+              <h3>Technology</h3>
+              <p>Developing my skills in HTML, CSS, JavaScript and digital technologies.</p>
+            </div>
+            <a href="skills.html" aria-label="Explore my skills">↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="contact-banner">
+      <div class="container contact-banner-inner">
+        <p class="eyebrow">want to know more?</p>
+        <h2>Let’s start a <span>conversation.</span></h2>
+        <a class="button button-light" href="contact.html">
+          Get in touch <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Haffriq Elliya bin Abdullah</p>
+      <p>Miri, Sarawak, Malaysia</p>
+      <a href="mailto:haffriqelliya2005@gmail.com">Email me ↗</a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+</body>
+</html>

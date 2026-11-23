@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Haffriq Elliya bin Abdullah.">
+  <title>Contact — Haffriq Elliya</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+<div class="page-loader" id="page-loader" role="status" aria-label="Loading page" hidden>
+  <span class="loader-mark" aria-hidden="true">H.</span>
+  <span class="loader-line" aria-hidden="true"></span>
+  <span class="loader-text">LOADING</span>
+</div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Haffriq home">HAFFRIQ<span>.</span></a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="journey.html">Journey</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html"class="active" aria-current="page">Contact</a>
+      </nav>
+<button class="music-toggle" id="music-toggle" type="button"
+  aria-label="Play music" aria-pressed="false">
+  <span aria-hidden="true">▶</span>
+</button>
+
+<audio id="site-music" loop preload="metadata">
+  <source src="song.mpeg" type="audio/mpeg">
+</audio>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <p class="eyebrow">CONTACT</p>
+        <h1 class="page-title">Let’s connect.</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <aside class="contact-panel">
+          <h3>Get in touch</h3>
+
+          <div class="contact-meta">
+            <div class="contact-item">
+              <span>Name</span>
+              <p>Haffriq Elliya bin Abdullah</p>
+            </div>
+
+            <div class="contact-item">
+              <span>Email</span>
+              <p><a href="mailto:haffriqelliya2005@gmail.com">haffriqelliya2005@gmail.com</a></p>
+            </div>
+
+            <div class="contact-item">
+              <span>Phone</span>
+              <p><a href="tel:+601133710277">01133710277</a></p>
+            </div>
+
+            <div class="contact-item">
+              <span>Location</span>
+              <p>Miri, Sarawak, Malaysia</p>
+            </div>
+
+            <div class="contact-item">
+              <span>Social</span>
+              <div class="social-links">
+                <a href="https://github.com/haffriqelliya2005-oss" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/haffriq-elliya-abdullah-4aa653404/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.instagram.com/haffriq/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="contact-form-box">
+          <h3>Send a message</h3>
+
+          <form class="contact-form" id="contact-form">
+            <label for="name">
+              Your name
+              <input id="name" name="name" type="text" required>
+            </label>
+
+            <label for="email">
+              Your email
+              <input id="email" name="email" type="email" required>
+            </label>
+
+            <label for="message">
+              Message
+              <textarea id="message" name="message" required></textarea>
+            </label>
+
+            <button class="button button-dark" type="submit">
+              Send message <span aria-hidden="true">↗</span>
+            </button>
+
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Haffriq Elliya bin Abdullah</p>
+      <p>Miri, Sarawak, Malaysia</p>
+      <a href="mailto:haffriqelliya2005@gmail.com">Email me ↗</a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <script>
+    const contactForm = document.querySelector("#contact-form");
+    const formStatus = document.querySelector("#form-status");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const name = String(formData.get("name") || "").trim();
+        const email = String(formData.get("email") || "").trim();
+        const message = String(formData.get("message") || "").trim();
+
+        if (!name || !email || !message) {
+          if (formStatus) formStatus.textContent = "Please fill in all fields before sending.";
+          return;
+        }
+
+        const subject = encodeURIComponent("Portfolio Message from " + name);
+        const body = encodeURIComponent(
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n\n" +
+          message
+        );
+
+        if (formStatus) formStatus.textContent = "Opening your email app...";
+        window.location.href = "mailto:haffriqelliya2005@gmail.com?subject=" + subject + "&body=" + body;
+      });
+    }
+  </script>
+</body>
+</html>
